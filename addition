@@ -1,0 +1,53 @@
+import java.util.*; 
+class Add 
+{
+public static void main(String[] args)
+{
+int n,m,i,j;
+int[][] a = new int[10][10];
+int[][] b = new int[10][10];
+int[][] c = new int[10][10];
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the no. of rows and columns of the matrix");
+n=sc.nextInt();
+m=sc.nextInt();
+System.out.println("Enter the elements of Matrix A"); 
+for (i = 0; i < n; i++) 
+{
+for (j = 0; j < m; j++)
+a[i][j]=sc.nextInt();
+}
+System.out.println("Enter the elements of Matrix B"); 
+for (i = 0; i < n; i++) 
+{
+for (j = 0; j < m; j++)
+b[i][j]=sc.nextInt();
+}
+System.out.println("The elements of Matrix A:"); 
+for (i = 0; i < n; i++) 
+{
+for (j = 0; j < m; j++)
+System.out.print(a[i][j] + " ");
+System.out.println();
+}
+System.out.println("The elements of Matrix B:"); 
+for (i = 0; i < n; i++) 
+{
+for (j = 0; j < m; j++)
+System.out.print(b[i][j] + " ");
+System.out.println();
+}
+for (i = 0; i < n; i++)
+{
+for (j = 0; j < m; j++)
+c[i][j] = a[i][j] + b[i][j];
+}
+System.out.println("Resultant Matrix:");
+for(i = 0; i < n; i++) 
+{
+for (j = 0; j < m; j++)
+System.out.print(c[i][j] + " ");
+System.out.println();
+}
+}
+}
